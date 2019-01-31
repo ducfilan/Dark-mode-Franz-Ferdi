@@ -1,4 +1,4 @@
-# Dark mode for Facebook Messenger & Facebook Workplace chat
+# Dark mode for Facebook Messenger & Workplace chat
 
 ## Installation
 1. Copy the `darkmode.css` file to:
