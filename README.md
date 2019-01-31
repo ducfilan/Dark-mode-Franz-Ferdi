@@ -8,3 +8,11 @@
 2. Reload Franz
 3. Open Franz's Settings (Ctrl+,) > Select `Your services` tab > Select the service that you want to change to dark mode and toggle the `Enable Dark Mode` setting.
 4. Reload your service to see changes
+
+## Current supporting services
+1. Facebook Messenger
+2. Facebook Workplace Chat (Facebook at work)
+3. Slack
+
+---
+_P/s: Gmail, Telegram and Skype is natively supported. You can change to dark mode in their settings._
