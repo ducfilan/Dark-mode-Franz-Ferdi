@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6
   color: #cecece!important;
 }
 
-._4sp8, ._2n3t, ._1sk6, ._17pz, ._1t_q
+._4sp8, ._2n3t, ._1sk6, ._17pz, ._1t_q,._5irm._7mkm
 {
   background-color: #1e1e1e!important;
 }
@@ -548,4 +548,22 @@ h1, h2, h3, h4, h5, h6
 
 ._1sk5 {
     box-shadow: none!important;
+}
+
+div._2poz._ui9 {
+    background-size: 20px 20px !important; height: 20px !important;width: 20px !important;
+    overflow: hidden;
+}
+
+._4_xe {
+    display: none;
+}
+
+._kmc._7kpg ._1p1t {
+    color: #ccc !important;
+    -webkit-text-fill-color: #ccc !important;
+}
+
+path#Fill-1, path#Fill-2 {
+    fill:  #ccc !important;
 }
