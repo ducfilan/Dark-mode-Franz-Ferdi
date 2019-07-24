@@ -14,5 +14,8 @@
 2. Facebook Workplace Chat (Facebook at work)
 3. Slack
 
+## References
+* [slack-night-mode](https://github.com/laCour/slack-night-mode) by [@laCour](https://github.com/laCour)
+
 ---
 _P/s: Gmail, Telegram and Skype is natively supported. You can change to dark mode in their settings._
