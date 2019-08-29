@@ -14,6 +14,7 @@
 2. Facebook Workplace Chat (Facebook at work)
 3. Slack
 4. Google Calendar
+5. Whatsapp
 
 ## References
 * [slack-night-mode](https://github.com/laCour/slack-night-mode) by [@laCour](https://github.com/laCour)
