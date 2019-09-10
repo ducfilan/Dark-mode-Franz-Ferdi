@@ -15,9 +15,11 @@
 3. Slack
 4. Google Calendar
 5. Whatsapp
+6. LinkedIn
 
 ## References
 * [slack-night-mode](https://github.com/laCour/slack-night-mode) by [@laCour](https://github.com/laCour)
+* [LinkedDark](https://userstyles.org/styles/173399/linkeddark) by [@Jordy3D](https://github.com/Jordy3D)
 
 ---
 _P/s: Gmail, Telegram and Skype is natively supported. You can change to dark mode in their settings._
