@@ -4,8 +4,8 @@
 @namespace    github.com/vednoc/onyx
 @homepageURL  https://github.com/vednoc/onyx
 @supportURL   https://github.com/vednoc/onyx/issues
-@updateURL    https://rawgit.com/vednoc/onyx/master/WhatsApp.user.css
-@version      1.4.3
+@updateURL    https://raw.githubusercontent.com/vednoc/onyx/master/WhatsApp.user.css
+@version      1.5.2
 @author       vednoc
 @license      MIT
 @preprocessor uso
@@ -25,6 +25,7 @@
 @var text customRules "Custom CSS rules" #test::after { content: "paste all your custom css here!" !important; }
 @var text customFonts "Custom fonts" "'custom-font', 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Lucida Grande', 'Arial', 'Ubuntu', 'Cantarell', 'Fira Sans',"
 @var text customCompact "Compact mode breakpoint" 720px
+@var text hoverDelay "Compact mode hover delay" 0.8s
 
 @advanced dropdown background "App background" {
   bg1 "Default theme image" <<<EOT
@@ -86,11 +87,11 @@
   EOT;
   enable "Enable" <<<EOT
   /* Blurry mode for images. *\/
-  #main [style*="height"] > img {
+  #main .copyable-area [style*="height"] > img {
     transition: 500ms ease-in-out;
     transition-delay: 0ms;
     filter: blur(10px) grayscale(100%); }
-  #main [style*="height"] > img:hover {
+  #main .copyable-area [style*="height"] > img:hover {
     transition-delay: 500ms;
     filter: blur(0px) grayscale(0%); } EOT;
 }
@@ -127,115 +128,97 @@
 
 @advanced dropdown compactMode "Compact mode for small resolutions" {
   enable "Enable" <<<EOT
-  @media screen and (max-height: 500px) {
-    /* App height reset. *\/
-    #app > div > .app { min-height: auto; }
-  }
-  @media screen and (max-width:/*[[customCompact]]*\/) {
-    /*.app > div { box-shadow: 0 0 0 2px inset crimson !important; } /**\/
-
-    /* Fix header width hiding icons. *\/
-    #side > header { min-width: 240px; }
-    /* Hide notifications. *\/
-    #side > header + span { display: none }
-
-    /* Contacts *\/
-    .app > div:nth-child(3) {
-      transition: 0;
-      flex: 0 0 75px !important; }
-    .app > div:nth-child(3):hover {
-      transition-delay: 0.99s;
-      flex: 0 0 40% !important; }
-    /* Search bar width. *\/
-    .ZP8RM:not(._19OGD) label {
-      padding: 0px; }
-    /* Contact list reset when right is active. *\/
-    .app.three > div:nth-child(3) {
-      flex: 0 0 75px !important;
-      margin-left: -75px !important; }
-
-    /* Chat section. *\/
-    ._1Iexl {
-      flex: 0 0 65% !important; }
-
-    /* On hover or active sub-menus. *\/
-    .app.two > .k1feT:hover,
-    .MZIyP .k1feT {
-      transition-delay: 1s !important;
-      /* TODO: Adjust panel width. *\/
-      flex: 0 0 30% !important; }
-
-    /* Info flexbox. *\/
-    .three ._3HZor {
-      width: calc(100% - 75px) !important;
-      left: 75px !important; }
-
-    /* Chat flexbox. *\/
-    .two > ._1Iexl {
-      margin: 0 !important;
-      flex: 0 0 calc(100% - 75px) !important; }
-
-    /* Search contacts. *\/
-    .two .k1feT:not(:hover) ._2MSJr {
-      padding: 0; }
-
-    /* On hover. *\/
-    .two .k1feT:hover ._2MSJr {
-      transition-delay: 1s !important; }
-
-    /** Hack for positioning unread counter. *\/
-    #side:not(:hover) ._3j7s9 ._1AwDx ._3Bxar span > div {
-      z-index: 101;
-      position: absolute; }
-    /* ? Unread counter. *\/
-    #side:not(:hover) div > .OUeyt {
-      height: 18px;
-      padding: 0 5px 0 5px;
-      margin: -5px 0 0 -35px;
-      background-color: var(--dark) !important;
-      box-shadow: 0 0 0 3px var(--darker) !important; }
-    /* On event. *\/
-    /*#side:hover div > .OUeyt {
-      background-color: var(--dark) !important;
-      box-shadow: 0 0 0 3px var(--darker) !important; }*\/
-
-    /* ? Message status. *\/
-    .two .k1feT ._3j7s9 ._1VfKB {
-      z-index: 101;
-      position: absolute;
-      margin-left: -68px;
-      margin-top: 5px;
-      border-radius: 50%;
-      background-color: var(--dark);
-      box-shadow: 0 0 0 3px var(--darker); }
-    /* Background on event. *\/
-    .two .k1feT ._2EXPL:hover ._1VfKB,
-    .two .k1feT ._2EXPL._1f1zm ._1VfKB {
-      background-color: var(--darker);
-      box-shadow: 0 0 0 3px var(--dark) !important; }
-
-    /** Icon size. *\/
-    .two .k1feT ._3j7s9 ._1VfKB span > svg {
-      padding: 2px;
-      height: 14px !important;
-      width: 14px !important; }
-
-    /* Hide all icons except new messages. *\/
-    .two .k1feT ._15G96 span:not(.OUeyt),
-    .two .k1feT .ZR5SB {
-      display: none !important; }
-  }
-  @media screen and (max-width: 720px) {
-    /* Width overflow fix. *\/
-    ._3dqpi {
-      min-width: 100%; }
-
-    /* On hover or active sub-menus. *\/
-    .app.two > .k1feT:hover,
-    .MZIyP .k1feT {
-      transition-delay: 1s !important;
-      flex: 0 0 40% !important; }
-  } EOT;
+    /* Reset min app height/width reset. *\/
+    @media screen and (max-height: 500px) { #app > div > .app { min-height: auto; }}
+    @media screen and (max-width: 648px) { #app > div > .app { min-width: auto; }}
+    /* Custom compact mode. *\/
+    @media screen and (max-width:/*[[customCompact]]*\/) {
+      /* .app > div div:hover { box-shadow: 0 0 0 2px inset crimson !important; } /**\/
+      /* Fix header width hiding icons. *\/
+      #side > header { min-width: 240px; }
+      /* Hide notifications. *\/
+      #side > header + span { display: none }
+      /* Search bar width. *\/
+      .ZP8RM:not(._19OGD) label { padding: 0px; }
+      /* ? Reset panes. *\/
+      .three > div:nth-child(3),
+      .three > div:nth-child(2) > div:nth-child(1),
+      .two > div:nth-child(2) > div:nth-child(1),
+      .two > div:nth-child(3) {
+        flex: 0 0 75px !important; }
+      /* Settings/Starred/Etc. *\/
+      .two > div:nth-child(2) > div._3kF8H {
+        transition: 0.3s ease-in-out !important;
+        flex: 0 0 75px !important; }
+      .two > div:nth-child(2) > div._3kF8H:hover {
+        flex: 0 0 30% !important; }
+      /* Upload preview. *\/
+      .two > div:nth-child(2) > div._2rI9W {
+        flex: 0 0 calc(100% - 75px) !important; }
+      /* Don't expand contacts if there are 3 panes. *\/
+      .three > div:nth-child(3):hover {
+        flex: 0 0 75px !important; }
+      /* Expand contacts. *\/
+      .two > div:nth-child(3) {
+        min-width: 1px !important;
+        transition: 0.3s ease-in-out !important;
+        transition-delay: 0.2s !important; }
+      .two > div:nth-child(3):hover {
+        min-width: 400px !important;
+        transition-delay: var(--hover-delay) !important;
+        flex: 0 0 30% !important; }
+      /* Pane -> Chat. *\/
+      .three ._2rI9W { flex: 1 1 auto !important; }
+      /* Pane -> Info. *\/
+      .three ._1C9rS {
+        max-width: 400px;
+        width: calc(100% - 76px); }
+      /* ? Hack for positioning unread counter. *\/
+      ._2UaNq .xD91K {
+        z-index: 199 !important;
+        display: flex !important;
+        flex-direction: row-reverse !important; }
+      /* ? Unread counter. *\/
+      ._2UaNq .xD91K ._1ZMSM .P6z4j {
+        z-index: 999 !important;
+        line-height: 23px !important;
+        margin: 7px 00px 0px -60px !important;
+        transition: 0.15s ease !important;
+        box-shadow: 0 0 0 3px var(--darker) !important; }
+      /* On event. *\/
+      #side ._2UaNq._3mMX1 .xD91K .P6z4j, #side ._2UaNq:hover .xD91K .P6z4j {
+        /* color: var(--accent) !important;
+        background-color: var(--darker) !important; *\/
+        box-shadow: 0 0 0 3px var(--dark) !important; }
+      /* Reset text position. *\/
+      ._2UaNq .xD91K span[dir] { margin-left: 10px; }
+      /* Remove icons we don't need. *\/
+      #side ._1ZMSM > span:not(.P6z4j) { display: none !important }
+      /* Remove overflow for unread messages counter. *\/
+      #side ._0LqQ {
+        margin-left: -10px !important;
+        overflow: unset !important }
+      /* Message dropdown thing; fixes ticks jumping left and right. *\/
+      #side ._0LqQ > span:last-child:not(._17TaE) { display: none !important }
+      /* ? Hack for positioning message status. *\/
+      ._3VIru {
+        z-index: 101;
+        position: absolute;
+        margin: 5px 0 0 -20px;
+        border-radius: 50%;
+        transition: 0.15s ease !important;
+        background-color: var(--dark);
+        box-shadow: 0 0 0 3px var(--darker); }
+      /* Make SVG smaller. *\/
+      ._3VIru > span > svg {
+        padding: 2px;
+        height: 14px !important;
+        width: 14px !important; }
+      /* Background on event. *\/
+      ._2UaNq:hover ._3VIru, ._2UaNq._3mMX1 ._3VIru {
+        background-color: var(--darker);
+        box-shadow: 0 0 0 3px var(--dark) !important; }
+    } EOT;
   disable "Disable" <<<EOT
   /* Disabled. *\/
   EOT;
@@ -253,17 +236,17 @@
   --mred: #a3525b;
   --mgreen: #70a352;
   --mblue: #527aa3;
+  --hover-delay: 0.8s;
   --image: url(https://media.discordapp.net/attachments/310799529161129984/417408747812552715/zilesanamin.jpg);
   --emojiOpacity: 0.75;
-  --version: "WhatsApp by Mew v1.4.3";
-  --message: "Updated on 3rd of June. Report bugs on GitHub! ";
+  --version: "WhatsApp by Mew v1.5.2";
+  --message: "Updated on 9th of October. Fixed bubbles once again. ";
   --changes: "See the changelog at: https://github.com/vednoc/onyx/releases";
 }
 
 /* Body reset. */
 body {
-  font-family: "'custom-font', 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Lucida Grande', 'Arial', 'Ubuntu', 'Cantarell', 'Fira Sans',"
-    sans-serif;
+  font-family: /*[[customFonts]]*/ sans-serif;
   background: none;
   background-color: var(--dark);
 }
@@ -291,6 +274,12 @@ body {
   background-color: var(--accent) !important;
 }
 /* Input placeholders. */
+::placeholder {
+  color: var(--lighter) !important;
+}
+::-moz-placeholder {
+  color: var(--lighter) !important;
+}
 ::-webkit-input-placeholder {
   color: var(--lighter) !important;
 }
@@ -314,11 +303,6 @@ progress {
 #app .app {
   background: none;
   background-color: var(--dark);
-}
-
-/* Accent background. */
-.app-wrapper::after {
-  background: none !important;
 }
 
 /* Log-in page. */
@@ -350,8 +334,10 @@ progress {
   fill: var(--dark) !important;
 }
 /* Fix QR code. */
-[alt="Scan me!"] {
-  border: 2px solid white !important;
+.landing-wrapper div[data-ref] {
+  border-radius: 0;
+  filter: contrast(150%) !important;
+  outline: 4px solid white !important;
 }
 /* Loader. */
 #startup svg > circle {
@@ -372,7 +358,7 @@ span._3PxOr svg path:nth-child(1) {
   max-width: 200px;
   max-height: 200px;
   border-radius: 50%;
-  filter: var(--emojiOpacity);
+  filter: opacity(0.75);
   transition: opacity 1s ease !important;
 }
 /* Text color. */
@@ -445,6 +431,7 @@ span._3PxOr svg path:nth-child(1) {
   background-color: var(--dark) !important;
 }
 /* Input element. */
+.ZP8RM ._183ES,
 .ZP8RM label input {
   color: var(--light);
   background-color: transparent;
@@ -456,6 +443,8 @@ span._3PxOr svg path:nth-child(1) {
 }
 
 /* New group and group info buttons. */
+._1w-mX,
+._70TS5,
 ._11p3Q,
 .r7sRK,
 ._8-yzK {
@@ -464,8 +453,13 @@ span._3PxOr svg path:nth-child(1) {
   background-color: transparent !important;
 }
 /* Hide borders. */
-._2DxRd {
-  border-color: var(--darker) !important;
+._2DxRd,
+._39cGk {
+  border-color: var(--shadow) !important;
+}
+/* Input text color. */
+._44uDJ {
+  color: var(--light) !important;
 }
 
 /* Search results. */
@@ -495,8 +489,8 @@ span._3PxOr svg path:nth-child(1) {
   background-color: var(--dark) !important;
 }
 /* Text color. */
-._2UaNq * {
-  color: var(--light);
+._2UaNq *:not(#z) {
+  color: var(--light) !important;
 }
 /* Borders. */
 ._2UaNq::after,
@@ -526,6 +520,15 @@ span._3PxOr svg path:nth-child(1) {
   min-height: 50px;
   height: auto;
   background-color: var(--darker) !important;
+}
+/* Send contacts. #42 */
+.WOXAS {
+  background-color: transparent !important;
+}
+/* Footer. */
+._21bWq,
+._22oFl {
+  background-color: var(--accent) !important;
 }
 /* Reset header height. */
 ._11GZy header > div:first-child {
@@ -648,6 +651,14 @@ select option {
 #main {
   background-color: var(--dark);
 }
+/* Fix parent-element. #43 */
+._1ays2 {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Doodle background. TODO: Plans for the future. */
+/*[[doodles]]*/
 
 /* Main -> Group description. */
 ._3jzsh {
@@ -706,21 +717,22 @@ select option {
   color: var(--light);
   background-color: var(--darker) !important;
 }
-/* Voice message duration. */
-._30ie- {
-  color: var(--light) !important;
-}
 
 /* Unknown contact. */
-.TYhk9 {
+._2Pown {
+  color: var(--light) !important;
   border-color: var(--darker) !important;
   background-color: var(--dark) !important;
-  box-shadow: 0 0px 8px 2px var(--shadow) !important;
+  box-shadow: 0 -1px 0 0 inset var(--darker) !important;
 }
 /* Buttons. */
-.TYhk9 ._1sB6s {
-  color: var(--light) !important;
+._2ZZub {
+  color: var(--lighter) !important;
   background-color: var(--darker) !important;
+}
+._2ZZub:hover {
+  color: var(--light) !important;
+  box-shadow: 0 2px 4px 0 var(--shadow) !important;
 }
 
 /* Shared contact button colors. */
@@ -748,7 +760,7 @@ select option {
 
 /* Right drawer. */
 /* .app ._3HZor ._2fq0t {
-    background-color: var(--darker); } */
+        background-color: var(--darker); } */
 /* Border-color. */
 .app ._3HZor {
   border-left-color: transparent !important;
@@ -767,7 +779,7 @@ select option {
 }
 /* Mute/starred messages. */
 ._3_-Si + ._3_-Si ._2x2XP {
-  border-color: var(--dark) !important;
+  border-color: var(--darker) !important;
 }
 
 /* Group info sections. */
@@ -788,6 +800,9 @@ select option {
 /* User's name. */
 .app ._3HZor span {
   color: var(--light);
+}
+.app ._3HZor ._23Un5 {
+  color: var(--mred);
 }
 /** Username colors in group chat. */
 .app [class*="color-"] span {
@@ -859,9 +874,12 @@ select option {
 ._1WMT2::after {
   display: none !important;
 }
+/* Selected message. */
+._1WMT2._2V_Wj,
+._1WMT2._2nA3s,
 ._1WMT2:hover {
   transition: 200ms ease-in-out !important;
-  background-color: var(--darker) !important;
+  background-color: var(--dark) !important;
 }
 /* Remove tails. */
 ._1WMT2 .tail-container {
@@ -881,30 +899,48 @@ select option {
   filter: invert(100%) opacity(0.8) !important;
 }
 /* Read by. */
-#app .app > div:nth-child(2) ._2AJf5 {
+#app .app > div:nth-child(2) ._2AJf5,
+#app .app > div:nth-child(2) ._19xqi {
+  box-shadow: none !important;
   background-color: transparent !important;
+}
+/* Read by text color. */
+#app .app > div:nth-child(2) ._2AJf5 span {
+  color: var(--accent) !important;
+}
+/* Forwarded message info. #44 */
+._1NZZN,
+._3XHR- {
+  border-color: var(--dark) !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+._1w7vp {
+  color: var(--light) !important;
 }
 
 /* Media/docs/links section. */
-._3HZor ._3b2Cf {
+._27U_m,
+.yrOIH {
+  border-bottom: 1px solid var(--dark);
   background-color: var(--darker) !important;
 }
 /* Active indicator. */
-._3HZor ._3b2Cf:before {
+._27U_m::before {
   background-color: var(--accent) !important;
 }
-/* Selected image. */
-._2Ry6_ ._2mlDB {
-  border-color: var(--accent) !important;
+/* Text color. */
+._26Nvu,
+._27U_m .Y1iVg {
+  color: var(--lighter) !important;
 }
 /* Selected links. */
-.D6ZWG {
-  background-color: var(--darker) !important;
+._27U_m .Y1iVg._3caqI {
+  color: var(--light) !important;
 }
-/* Text color. */
-.D6ZWG ._1S4i5,
-._2Mvo8.fyJXn {
-  color: var(--lighter);
+/* Selected image. */
+._2Ji5m {
+  border-color: var(--darker) !important;
 }
 
 /** Media viewer. */
@@ -949,7 +985,7 @@ select option {
 }
 
 /* Footer. */
-._2AP3i {
+._2n0jo {
   border-color: var(--darker) !important;
   background-color: var(--dark) !important;
 }
@@ -963,10 +999,18 @@ select option {
   outline: 3px solid var(--accent) !important;
 }
 
-/* Message bubbles. */
-.message-in:not(.a81-s),
-.message-out:not(.a81-s),
-.message {
+/* Highlight message bubbles. #29 */
+div.message-in.velocity-animating > div > div,
+div.message-out.velocity-animating > div > div {
+  background-color: var(--accent) !important;
+}
+.velocity-animating > .tail > .tail-container {
+  border-top-color: var(--accent) !important;
+}
+
+/* Bubble colors. #49 #54 */
+.message-in > div:not(.a81-s) > div,
+.message-out > div:not(.a81-s) > div {
   background-color: var(--darker) !important;
 }
 ._2v02G {
@@ -981,6 +1025,20 @@ select option {
   color: var(--light) !important;
 }
 
+/* Voice messages. */
+::-moz-range-thumb {
+  background-color: var(--accent) !important;
+}
+::-moz-range-track {
+  background-color: var(--lighter) !important;
+}
+._7sUPO {
+  background-color: var(--accent) !important;
+}
+._1FWQp {
+  color: var(--light) !important;
+}
+
 /* Use accent color for links. #20 */
 a[href].selectable-text {
   color: var(--accent) !important;
@@ -989,6 +1047,19 @@ a[href].selectable-text {
 /* Forwarded message. */
 ._15aTv {
   color: var(--lighter) !important;
+}
+
+/* Show more. */
+._1Jc9f {
+  color: var(--accent) !important;
+}
+
+/* Deleted message. */
+._3uHCS {
+  color: var(--lighter) !important;
+}
+span[class][data-icon="recalled-out"] svg path {
+  fill: red !important;
 }
 
 /* Phone numbers of users that aren't your contacts. */
@@ -1020,15 +1091,6 @@ a[href].selectable-text {
   color: var(--lighter);
 }
 
-/* Message options. */
-._3EQsG {
-  /*transition: 200ms ease-in-out;/**/
-  background: linear-gradient(
-    to right,
-    transparent 0%,
-    var(--darker) 40%
-  ) !important;
-}
 /* Message options for images. */
 ._3EQsG._1eJVc {
   background: none !important;
@@ -1073,7 +1135,8 @@ span._2ZAIy {
 }
 
 /* Document embeds. */
-._3RQfg ._3a29n {
+._3a29n,
+._1mrMQ {
   background-color: var(--dark) !important;
 }
 
@@ -1153,12 +1216,12 @@ footer ._1ebw2 > div:last-child > div svg {
   background-color: var(--shadow) !important;
 }
 /* Selected icon. */
-#main ._15wNI {
+._15wNI {
   border-color: var(--accent) !important;
   background-color: var(--accent) !important;
 }
 /* Checkmark. */
-#main ._15wNI ._1ygtt {
+._15wNI ._1ygtt {
   border-bottom-color: var(--light);
   border-right-color: var(--light);
 }
@@ -1175,18 +1238,21 @@ footer ._1ebw2 > div:last-child > div svg {
   border-top: 12px solid var(--darker);
   background: none !important;
 }
-.tail.message-in .tail-container {
+.message-in > .tail > .tail-container {
   left: -10px !important;
   top: 0px;
   border-left: 10px solid transparent;
   border-radius: 5px 0 0 0;
 }
-.tail.message-out .tail-container {
+.message-out > .tail > .tail-container {
   right: -10px !important;
   top: 0px;
   border-right: 10px solid transparent;
   border-radius: 0 5px 0 0;
 }
+
+/* Disable tails everywhere. */
+/*[[tails]]*/
 
 /* Disable tails everywhere except in chat. */
 .starred-msg-wrapper .tail-container,
@@ -1215,25 +1281,29 @@ footer ._1ebw2 > div:last-child > div svg {
 ._3qAvH * {
   color: var(--light) !important;
 }
-/* Reset message menu. */
-._15CAo._2Nkc4 {
-  /* top: 0 !important;
-    right: 0 !important; */
-  background: linear-gradient(
-    to right,
-    transparent 0%,
-    var(--darker) 40%
-  ) !important;
+
+/* Message options. */
+._15CAo {
+  background: linear-gradient(90deg, transparent, var(--darker) 40%) !important;
 }
-/* Icon background. */
-.YiYMT {
-  background-color: transparent !important;
+/* Reset sticker menu background. */
+.a81-s > div + span > div {
+  background: none !important;
+}
+/* Context menu buttons. */
+[data-js-context-icon="true"] {
+  background-image: none !important;
+  background: none !important;
+}
+[data-js-context-icon="true"] + div {
+  background: var(--darker) !important;
 }
 
 /* Emoji/gif/stickers menu. */
 .QChXd,
 ._20KNO,
-.RxbUw {
+.RxbUw,
+._2PpWQ > div {
   background-color: var(--dark) !important;
 }
 /* Temporary fix for emoji container. */
@@ -1261,6 +1331,7 @@ footer ._1ebw2 > div:last-child > div svg {
 /* Search emojis. */
 ._2Qm0c,
 ._2Qm0c label {
+  box-shadow: none !important;
   background-color: var(--dark) !important;
 }
 /* Text color. */
@@ -1409,8 +1480,10 @@ footer ._1ebw2 > div:last-child > div svg {
 /* Add file icon. */
 .GpvML,
 ._1ypOz,
-._3fktq {
+._3fktq,
+._1g8sv {
   background-color: var(--dark) !important;
+  box-shadow: 0 2px 4px var(--shadow) !important;
 }
 /* Border. */
 ._1gcLL::after {
@@ -1419,11 +1492,13 @@ footer ._1ebw2 > div:last-child > div svg {
 
 /* Accent border. */
 .CzI8E,
-._31WRs ._1DTd4 {
+._31WRs ._1DTd4,
+._2Fvnm ._3ogpF {
   border-bottom-color: var(--accent) !important;
 }
 /* Text color. */
-._7HWvs {
+._7HWvs,
+.A_Kh_ {
   color: var(--light) !important;
 }
 
@@ -1443,13 +1518,9 @@ footer ._1ebw2 > div:last-child > div svg {
   opacity: 0.8;
   z-index: -1;
 }
-/* Normal icon. */
-span[data-icon="status-v3"] > svg > path:first-child {
+/* Status icon. */
+span[data-icon*="status-v3"] > svg > path:first-child {
   opacity: 0.55 !important;
-}
-/* Unread status. */
-span[data-icon="status-v3-unread"] > svg > path:first-child {
-  opacity: 1 !important;
 }
 /* Left hand side. */
 ._2dLx9 .IMn_C {
@@ -1457,7 +1528,10 @@ span[data-icon="status-v3-unread"] > svg > path:first-child {
 }
 /* Text color. */
 .IMn_C span {
-  color: var(--lighter) !important;
+  color: var(--light) !important;
+}
+.qlhJH hr {
+  color: var(--dark) !important;
 }
 /* Right hand side. */
 ._2dLx9 ._3MBzN {
@@ -1467,41 +1541,22 @@ span[data-icon="status-v3-unread"] > svg > path:first-child {
 ._2dLx9 ._3MBzN div {
   color: var(--lighter) !important;
 }
-/*// Reply to status. */
-.C534L ._3PmkG {
-  border-radius: 5px !important;
+/* Reply to status. */
+.QRsOy {
+  background-color: var(--dark) !important;
+}
+/* Input bar. */
+._3FeAD._2nW8k {
   background-color: var(--dark) !important;
 }
 
-/*// REMOVE STUFF. */
-/* Remove pseudo elements. */
-[class*="chat"]:before,
-[class*="chat"]:after,
-.gQzdc:after,
-._1CkkN:before,
-._3AwwN:after,
-.MS-DH:before,
-.MS-DH:after,
-._3YwRO {
-  display: none !important;
-}
-/* Remove ONLY borders. */
-._1CkkN ._10xEB,
-._14oqx .DcItJ,
-html[dir] ._2EXPL:after,
-._3j7s9,
-._1fkhx,
-.chat-body,
-._3hhmj,
-._2nmDZ {
-  border: none !important;
-}
-/* Some random iframe? */
+/* Remove weird iframes. */
 object {
   display: none !important;
 }
 
 /* Global icon color. */
+span[data-icon^="business-"] > svg path,
 span:not([data-icon="image"]) > svg > path {
   transition: 200ms ease;
   fill: var(--icon) !important;
@@ -1513,20 +1568,22 @@ span:not([data-icon="image"]):hover > svg > path {
 }
 
 /* Upload files. */
-.GK4Lv::after {
-  box-shadow: 0 1px 2px var(--shadow), 0 4px 8px var(--shadow) !important;
+.azEEh {
+  color: var(--light) !important;
+}
+._2sn3C {
+  background-color: var(--darker) !important;
+}
+.Ijb1Q::after {
+  box-shadow: 0 4px 8px 2px var(--shadow) !important;
 }
 
 /* Default profile picture background. */
-span[data-icon="default-user"] svg > path:first-child,
-span[data-icon="default-group"] svg > path:first-child,
-span[data-icon="default-broadcast"] svg > path:first-child {
+span[data-icon^="default-"] svg > path:first-child {
   fill: var(--dark) !important;
 }
 
-span[data-icon="default-user"] svg > g > path:last-child,
-span[data-icon="default-group"] svg > path:last-child,
-span[data-icon="default-broadcast"] svg > path:last-child {
+span[data-icon^="default-"] svg path:last-child {
   opacity: 0.7;
   fill: var(--icon) !important;
 }
@@ -1550,8 +1607,7 @@ span[data-icon="status-v3-unread"] > svg > path:last-child {
 }
 
 /* Misc icons fix. */
-span[data-icon="chevron-left"] svg path,
-span[data-icon="chevron-right"] svg path,
+span[data-icon^="chevron-"] svg path,
 span[data-icon="x-viewer"] svg path,
 span[data-icon="download"] svg path,
 span[data-icon="forward"] svg path,
@@ -1610,6 +1666,11 @@ input[type="range"]::-webkit-slider-thumb {
   cursor: pointer;
   background: var(--accent) !important;
 }
+/* Audio length. */
+._3HwRC,
+._1lxsr {
+  color: var(--light) !important;
+}
 
 /* Rounded buttons. */
 span svg > path[fill="#00BFA5"] {
@@ -1635,137 +1696,20 @@ span svg > path[fill="#00BFA5"] {
     border-radius: 8px;
     box-shadow: 0 4px 24px -2px var(--shadow);
   }
+
+  /* Fullscreen. */
+  /*[[fullscreen]]*/
+
+  /* App background. */
+  /*[[background]]*/
 }
+
+/* "Privacy mode." */
+/*[[blurContacts]]*/
+/*[[blurImages]]*/
 
 /* Compact mode. */
-@media screen and (max-height: 500px) {
-  /* App height reset. */
-  #app > div > .app {
-    min-height: auto;
-  }
-}
-@media screen and (max-width: 760px) {
-  /* Fix header width hiding icons. */
-  #side > header {
-    min-width: 240px;
-  }
-  /* Hide notifications. */
-  #side > header + span {
-    display: none;
-  }
+/*[[compactMode]]*/
 
-  /* Contacts */
-  .app > div:nth-child(3) {
-    transition: 0;
-    flex: 0 0 75px !important;
-  }
-  .app > div:nth-child(3):hover {
-    transition-delay: 0.99s;
-    flex: 0 0 40% !important;
-  }
-  /* Search bar width. */
-  .ZP8RM:not(._19OGD) label {
-    padding: 0px;
-  }
-  /* Contact list reset when right is active. */
-  .app.three > div:nth-child(3) {
-    flex: 0 0 75px !important;
-    margin-left: -75px !important;
-  }
-
-  /* Chat section. */
-  ._1Iexl {
-    flex: 0 0 65% !important;
-  }
-
-  /* On hover or active sub-menus. */
-  .app.two > .k1feT:hover,
-  .MZIyP .k1feT {
-    transition-delay: 1s !important;
-    /* TODO: Adjust panel width. */
-    flex: 0 0 30% !important;
-  }
-
-  /* Info flexbox. */
-  .three ._3HZor {
-    width: calc(100% - 75px) !important;
-    left: 75px !important;
-  }
-
-  /* Chat flexbox. */
-  .two > ._1Iexl {
-    margin: 0 !important;
-    flex: 0 0 calc(100% - 75px) !important;
-  }
-
-  /* Search contacts. */
-  .two .k1feT:not(:hover) ._2MSJr {
-    padding: 0;
-  }
-
-  /* On hover. */
-  .two .k1feT:hover ._2MSJr {
-    transition-delay: 1s !important;
-  }
-
-  /** Hack for positioning unread counter. */
-  #side:not(:hover) ._3j7s9 ._1AwDx ._3Bxar span > div {
-    z-index: 101;
-    position: absolute;
-  }
-  /* ? Unread counter. */
-  #side:not(:hover) div > .OUeyt {
-    height: 18px;
-    padding: 0 5px 0 5px;
-    margin: -5px 0 0 -35px;
-    background-color: var(--dark) !important;
-    box-shadow: 0 0 0 3px var(--darker) !important;
-  }
-  /* On event. */
-  /*#side:hover div > .OUeyt {
-      background-color: var(--dark) !important;
-      box-shadow: 0 0 0 3px var(--darker) !important; }*/
-
-  /* ? Message status. */
-  .two .k1feT ._3j7s9 ._1VfKB {
-    z-index: 101;
-    position: absolute;
-    margin-left: -68px;
-    margin-top: 5px;
-    border-radius: 50%;
-    background-color: var(--dark);
-    box-shadow: 0 0 0 3px var(--darker);
-  }
-  /* Background on event. */
-  .two .k1feT ._2EXPL:hover ._1VfKB,
-  .two .k1feT ._2EXPL._1f1zm ._1VfKB {
-    background-color: var(--darker);
-    box-shadow: 0 0 0 3px var(--dark) !important;
-  }
-
-  /** Icon size. */
-  .two .k1feT ._3j7s9 ._1VfKB span > svg {
-    padding: 2px;
-    height: 14px !important;
-    width: 14px !important;
-  }
-
-  /* Hide all icons except new messages. */
-  .two .k1feT ._15G96 span:not(.OUeyt),
-  .two .k1feT .ZR5SB {
-    display: none !important;
-  }
-}
-@media screen and (max-width: 720px) {
-  /* Width overflow fix. */
-  ._3dqpi {
-    min-width: 100%;
-  }
-
-  /* On hover or active sub-menus. */
-  .app.two > .k1feT:hover,
-  .MZIyP .k1feT {
-    transition-delay: 1s !important;
-    flex: 0 0 40% !important;
-  }
-}
+/* Custom CSS rules. */
+/*[[customRules]]*/
