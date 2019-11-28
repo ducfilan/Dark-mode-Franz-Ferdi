@@ -595,3 +595,14 @@ body ._2pgc {
 body ._5r8a._5r8b {
     background: #14120f !important;
 }
+
+/* From @mathieuf20 - Fix code blocks yellow */
+body ._3058 ._wu0 ._52mr {
+	color: white;
+}
+
+body ._wu0 {
+	background: #222222;
+	border: 1px solid #444444;
+}
+/* end */
