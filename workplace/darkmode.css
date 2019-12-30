@@ -1,13 +1,37 @@
-body, .po7knmyp, ._5f0v, ._6q1a ._4sp8, .xdo5vwd7, .nyxn78s7 {
+body,
+.po7knmyp,
+._5f0v,
+._6q1a ._4sp8,
+.nyxn78s7,
+._3z62,
+._4u-c,
+.gp5lzjy8,
+._6q1a ._5irm._7mkm {
     background-color: #262626;
     color: #cecece;
 }
 
-h1, h2, h3, h4, h5, span, .oo9gr5id, ._364g, ._4p9w ._1ht6 {
+._6q1a ._5irm._7mkm {
+    border-top: 1px solid;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+span,
+.oo9gr5id,
+._364g,
+._4p9w ._1ht6,
+._497p,
+._ih3,
+._4k7a {
     color: #95a5a6;
 }
 
-._5i_d {
+._5i_d,
+._29_7 ._3058._s1-._4k7c {
     border: 1px solid rgba(255, 255, 255, .1);
 }
 
@@ -16,9 +40,21 @@ span._509v {
 }
 
 ._nd_ ._hh7 {
-    background-color: #0084ff!important;
+    background-color: #0084ff !important;
 }
 
 ._nd_ ._hh7 span {
-    color: #fff!important;
+    color: #fff !important;
+}
+
+._4rv3._7og6 svg path {
+    fill: #cecece;
+}
+
+._7kpk {
+    background-color: rgba(68, 68, 68, 0.82);
+}
+
+._6q1a ._8rsr {
+    fill: #262626;
 }
