@@ -1,20 +1,27 @@
+/**
+   * Everything you need to know is below:
+   * Source:  https://github.com/vednoc/onyx
+   * Discord: https://discord.gg/NpT8PzA
+   * License: MIT
+   */
+
   :root {
-    --dark: #272c35;
-    --darker: #1f232a;
-    --light: #d1d1d1;
-    --lighter: #e9e9e9;
-    --accent: #7289da;
-    --icon: #e1e1e1;
-    --shadow: rgba(0,0,0,0.12);
-    --mred: #A3525B;
-    --mgreen: #70A352;
-    --mblue: #527AA3;
+    --dark:    #272C35;
+    --darker:  #1F232A;
+    --light:   #D1D1D1;
+    --lighter: #E9E9E9;
+    --accent:  #7289DA;
+    --icon:    #E1E1E1;
+    --shadow:  rgba(0,0,0,0.10);
+    --mred:    #A3525B;
+    --mgreen:  #70A352;
+    --mblue:   #527AA3;
     --hover-delay: 0.8s;
-    --image: url("https://raw.githubusercontent.com/vednoc/dark-whatsapp/master/images/background.jpg");
+    --image: url(https://media.discordapp.net/attachments/310799529161129984/417408747812552715/zilesanamin.jpg);
     --emojiOpacity: 0.75;
-    --ui-font: /*[[customFonts]]*/ sans-serif;
+    --ui-font: 'font_name', 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Lucida Grande', 'Arial', 'Ubuntu', 'Cantarell', 'Fira Sans', sans-serif;
     --version: "WhatsApp by Mew v1.7.1";
-    --message: "Updated on 16th of January. Ported some fixes to v1. Please switch to v2 because v1 is unsupported! ";
+    --message: "Updated on 16th of January. Ported some fixes to v1. Please switch to v2 because v1 is unsupported! Also, please report issues on GitHub because I can't log into USo forums. ";
     --changes: "Visit https://github.com/vednoc/dark-whatsapp for more info.";
   }
 
@@ -165,7 +172,6 @@
         border: 0px solid var(--dark);
         background-color: var(--dark) !important; }
       /* Input element. */
-
       .ZP8RM ._183ES,
       .ZP8RM label input {
         color: var(--light);
@@ -328,7 +334,8 @@
       flex-direction: column !important; }
 
     /* Doodle background. TODO: Plans for the future. */
-    /*[[doodles]]*/
+    #app [data-asset-chat-background="true"] {
+    filter: invert(100%) opacity(0.45) !important; }
 
     /* Main -> Group description. */
     ._3jzsh {
@@ -796,7 +803,7 @@
       border-radius: 0 5px 0 0; }
 
     /* Disable tails everywhere. */
-    /*[[tails]]*/
+    /* Tails are enabled. */
 
     /* Disable tails everywhere except in chat. */
     .starred-msg-wrapper .tail-container,
@@ -857,7 +864,7 @@
       box-shadow: none !important;
       background-color: var(--dark) !important; }
       /* Text color. */
-      .QChXd input, ._2Qm0c input {
+      ._2Qm0c input {
         color: var(--light) !important; }
 
     /* Gif preloader background. */
@@ -1334,3 +1341,116 @@
     #app .app {
       border-radius: 8px;
       box-shadow: 0 4px 24px -2px var(--shadow); }
+
+    /* Fullscreen. */
+    /* Fullscreen is disabled. */
+
+    /* App background. */
+      #app > div::after {
+    top: 0px; right: 0px;
+    bottom: 0px; left: 0px;
+    height: auto; width: auto;
+    background-color: var(--dark) !important;
+    background-image: var(--image) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+
+  }
+
+  /* "Privacy mode." */
+  /* Blurred contacts are disabled. */
+  /* Blurred images are disabled. */
+
+  /* Compact mode. */
+      /* Reset min app height/width reset. */
+    @media screen and (max-height: 500px) { #app > div > .app { min-height: auto; }}
+    @media screen and (max-width: 648px) { #app > div > .app { min-width: auto; }}
+    /* Custom compact mode. */
+    @media screen and (max-width:720px) {
+      /* .app > div div:hover { box-shadow: 0 0 0 2px inset crimson !important; } /**/
+      /* Fix header width hiding icons. */
+      #side > header { min-width: 240px; }
+      /* Hide notifications. */
+      #side > header + span { display: none }
+      /* Search bar width. */
+      .ZP8RM:not(._19OGD) label { padding: 0px; }
+      /* ? Reset panes. */
+      .three > div:nth-child(3),
+      .three > div:nth-child(2) > div:nth-child(1),
+      .two > div:nth-child(2) > div:nth-child(1),
+      .two > div:nth-child(3) {
+        flex: 0 0 75px !important; }
+      /* Settings/Starred/Etc. */
+      .two > div:nth-child(2) > div._3kF8H {
+        transition: 0.3s ease-in-out !important;
+        flex: 0 0 75px !important; }
+      .two > div:nth-child(2) > div._3kF8H:hover {
+        flex: 0 0 30% !important; }
+      /* Upload preview. */
+      .two > div:nth-child(2) > div._2rI9W {
+        flex: 0 0 calc(100% - 75px) !important; }
+      /* Don't expand contacts if there are 3 panes. */
+      .three > div:nth-child(3):hover {
+        flex: 0 0 75px !important; }
+      /* Expand contacts. */
+      .two > div:nth-child(3) {
+        min-width: 1px !important;
+        transition: 0.3s ease-in-out !important;
+        transition-delay: 0.2s !important; }
+      .two > div:nth-child(3):hover {
+        min-width: 400px !important;
+        transition-delay: var(--hover-delay) !important;
+        flex: 0 0 30% !important; }
+      /* Pane -> Chat. */
+      .three ._2rI9W { flex: 1 1 auto !important; }
+      /* Pane -> Info. */
+      .three ._1C9rS {
+        max-width: 400px;
+        width: calc(100% - 76px); }
+      /* ? Hack for positioning unread counter. */
+      ._2UaNq .xD91K {
+        z-index: 199 !important;
+        display: flex !important;
+        flex-direction: row-reverse !important; }
+      /* ? Unread counter. */
+      ._2UaNq .xD91K ._1ZMSM .P6z4j {
+        z-index: 999 !important;
+        line-height: 23px !important;
+        margin: 7px 00px 0px -60px !important;
+        transition: 0.15s ease !important;
+        box-shadow: 0 0 0 3px var(--darker) !important; }
+      /* On event. */
+      #side ._2UaNq._3mMX1 .xD91K .P6z4j, #side ._2UaNq:hover .xD91K .P6z4j {
+        /* color: var(--accent) !important;
+        background-color: var(--darker) !important; */
+        box-shadow: 0 0 0 3px var(--dark) !important; }
+      /* Reset text position. */
+      ._2UaNq .xD91K span[dir] { margin-left: 10px; }
+      /* Remove icons we don't need. */
+      #side ._1ZMSM > span:not(.P6z4j) { display: none !important }
+      /* Remove overflow for unread messages counter. */
+      #side ._0LqQ {
+        margin-left: -10px !important;
+        overflow: unset !important }
+      /* Message dropdown thing; fixes ticks jumping left and right. */
+      #side ._0LqQ > span:last-child:not(._17TaE) { display: none !important }
+      /* ? Hack for positioning message status. */
+      ._3VIru {
+        z-index: 101;
+        position: absolute;
+        margin: 5px 0 0 -20px;
+        border-radius: 50%;
+        transition: 0.15s ease !important;
+        background-color: var(--dark);
+        box-shadow: 0 0 0 3px var(--darker); }
+      /* Make SVG smaller. */
+      ._3VIru > span > svg {
+        padding: 2px;
+        height: 14px !important;
+        width: 14px !important; }
+      /* Background on event. */
+      ._2UaNq:hover ._3VIru, ._2UaNq._3mMX1 ._3VIru {
+        background-color: var(--darker);
+        box-shadow: 0 0 0 3px var(--dark) !important; }
+    }
