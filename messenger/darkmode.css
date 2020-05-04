@@ -1,5 +1,19 @@
 /** Transitions **/
-._4sp8, ._4eby, ._59s7, ._3s-4, ._2y8_, ._1sk6, ._4gd0, ._5pw9, ._58ahm, ._4x7m, ._80cm, ._80co, ._8i1, ._3egs, ._5r8a._5r8b {
+._4sp8,
+._4eby,
+._59s7,
+._3s-4,
+._2y8_,
+._1sk6,
+._4gd0,
+._5pw9,
+._58ahm,
+._4x7m,
+._80cm,
+._80co,
+._8i1,
+._3egs,
+._5r8a._5r8b {
     transition: background 0.5s !important;
 }
 
@@ -7,7 +21,10 @@ body {
     -webkit-transition: background 0.5s, color 0.5s !important;
 }
 
-._2y8_, ._5i_d, ._3wb1, ._3way {
+._2y8_,
+._5i_d,
+._3wb1,
+._3way {
     transition: border 0.5s !important;
 }
 
@@ -15,15 +32,26 @@ body {
     transition: background 0.5s, border 0.5s !important;
 }
 
-._673w, ._36ic, ._374b, ._2y8y, ._llj, ._2c9i ._4ebz, ._4dx4, ._koh {
+._673w,
+._36ic,
+._374b,
+._2y8y,
+._llj,
+._2c9i ._4ebz,
+._4dx4,
+._koh {
     transition: border-bottom 0.5s !important;
 }
 
-._1t2u, ._4_j5 {
+._1t2u,
+._4_j5 {
     transition: border-left 0.5s !important;
 }
 
-._4rv3, ._1li-, ._3war, ._3wax {
+._4rv3,
+._1li-,
+._3war,
+._3wax {
     transition: border-top 0.5s !important;
 }
 
@@ -39,7 +67,89 @@ body {
     transition: border-left 0.5s !important;
 }
 
-h1, h2, h3, h4, h5, h6, textarea, keygen, select, ._2v6o, ._5eu7, ._3eus, ._5uh, ._3x6v, ._5rh4, ._5qsj, ._497p, ._5i_d .__6m, ._1r3o, ._374c, ._3q35, ._2y8z, ._2mjl, ._1n-e, ._4dx5, ._38wl, ._4x7m, ._4x79, ._4x7b, body, ._3szq, ._4rph ._4rpj, ._364g, ._2jnv, ._2jnx, ._2jnz, ._2jnx ._30e7 ._5j5f, ._5i_d .__6k, ._5i_d .__6l, ._3wa-, ._3wb0, ._2c9i ._19jt, ._4ng2, ._3q34, ._36zg, ._hh7 a:not(_ih-), ._3eur._6ybk a, label, ._618l, ._618n, ._6cs7, ._koh li:not(.selected), ._517h, ._1suj, ._1suk, .uiInputLabel .__rm+.uiInputLabelLabel, ._7492, ._5iwm ._58al::placeholder, ._5pwa, ._5pw6, ._58al, ._74ku, ._7q1q, ._7ht_, ._6ct8._6y58, ._6zkf, .__6k, .__6l, .__6m, ._3b4u, ._1mr_, ._1mq-, ._2f5n ._29ey, ._67tw, ._4lh7, ._3z53, ._50f9, ._1jx6, ._1jw-, ._50cx:not(._50cy), ._51l0 ._1-sv, ._217a ._t5c ._5jdu, ._217a ._t5c ._5jdu._42fr {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+textarea,
+keygen,
+select,
+._2v6o,
+._5eu7,
+._3eus,
+._5uh,
+._3x6v,
+._5rh4,
+._5qsj,
+._497p,
+._5i_d .__6m,
+._1r3o,
+._374c,
+._3q35,
+._2y8z,
+._2mjl,
+._1n-e,
+._4dx5,
+._38wl,
+._4x7m,
+._4x79,
+._4x7b,
+body,
+._3szq,
+._4rph ._4rpj,
+._364g,
+._2jnv,
+._2jnx,
+._2jnz,
+._2jnx ._30e7 ._5j5f,
+._5i_d .__6k,
+._5i_d .__6l,
+._3wa-,
+._3wb0,
+._2c9i ._19jt,
+._4ng2,
+._3q34,
+._36zg,
+._hh7 a:not(_ih-),
+._3eur._6ybk a,
+label,
+._618l,
+._618n,
+._6cs7,
+._koh li:not(.selected),
+._517h,
+._1suj,
+._1suk,
+.uiInputLabel .__rm+.uiInputLabelLabel,
+._7492,
+._5iwm ._58al::placeholder,
+._5pwa,
+._5pw6,
+._58al,
+._74ku,
+._7q1q,
+._7ht_,
+._6ct8._6y58,
+._6zkf,
+.__6k,
+.__6l,
+.__6m,
+._3b4u,
+._1mr_,
+._1mq-,
+._2f5n ._29ey,
+._67tw,
+._4lh7,
+._3z53,
+._50f9,
+._1jx6,
+._1jw-,
+._50cx:not(._50cy),
+._51l0 ._1-sv,
+._217a ._t5c ._5jdu,
+._217a ._t5c ._5jdu._42fr {
     transition: color 0.5s !important;
 }
 
@@ -47,7 +157,9 @@ h1, h2, h3, h4, h5, h6, textarea, keygen, select, ._2v6o, ._5eu7, ._3eus, ._5uh,
     transition: color 0.0s !important;
 }
 
-._225b, ._jf4 ._jf3, ._o46:not(._nd_) ._454y ._1mj0 {
+._225b,
+._jf4 ._jf3,
+._o46:not(._nd_) ._454y ._1mj0 {
     transition: background-color 0.5s, color 0.5s !important;
 }
 
@@ -59,19 +171,55 @@ hr {
     transition: background-color 0.5s, border-bottom 0.5s !important;
 }
 
-._2615, ._1ht1._1ht2, ._1hbw ._5pd7, ._4-hy ._3ixn, ._7jxv, ._5iwm ._58al, ._6ymu, ._6-xp, ._6ybv, ._6y56, ._6ybz:not(._7ipg), ._7hu0, ._7hty, ._7-_v, ._1ht1._1ht2 ._6zkc, ._7hu1, ._5irm._7mkm, ._7kpk, ._3b4h, ._3rh0, ._3z54, ._49no {
+._2615,
+._1ht1._1ht2,
+._1hbw ._5pd7,
+._4-hy ._3ixn,
+._7jxv,
+._5iwm ._58al,
+._6ymu,
+._6-xp,
+._6ybv,
+._6y56,
+._6ybz:not(._7ipg),
+._7hu0,
+._7hty,
+._7-_v,
+._1ht1._1ht2 ._6zkc,
+._7hu1,
+._5irm._7mkm,
+._7kpk,
+._3b4h,
+._3rh0,
+._3z54,
+._49no {
     transition: background-color 0.5s !important;
 }
 
-._5pw9, ._58ah, ._7q0v, ._7q1i, ._7q1l, ._7q1m, ._7q1n, ._71bm._71bn, ._71bo._71bm:hover, ._3b4t, ._2m5p {
+._5pw9,
+._58ah,
+._7q0v,
+._7q1i,
+._7q1l,
+._7q1m,
+._7q1n,
+._71bm._71bn,
+._71bo._71bm:hover,
+._3b4t,
+._2m5p {
     transition: border-color 0.5s !important;
 }
 
-._1ht1:active ._7q1i, ._1ht1:active ._7q0v {
+._1ht1:active ._7q1i,
+._1ht1:active ._7q0v {
     transition: border-color 0.0s !important;
 }
 
-._7q1p, ._2f5n, .__6j._43kk, ._ric, ._4mnq {
+._7q1p,
+._2f5n,
+.__6j._43kk,
+._ric,
+._4mnq {
     transition: background-color 0.5s, border-color 0.5s !important;
 }
 
@@ -83,11 +231,19 @@ hr {
     transition: background-color 0.0s !important;
 }
 
-._4rv6, a._4ce_ {
+._4rv6,
+a._4ce_ {
     transition: filter 0.5s, opacity 0.5s !important;
 }
 
-mask + rect, path#Fill-1, path#Fill-2, path#Fill-8, path#Fill-19, path#Fill-23, path#Fill-24, ._80cm ._7oal path {
+mask+rect,
+path#Fill-1,
+path#Fill-2,
+path#Fill-8,
+path#Fill-19,
+path#Fill-23,
+path#Fill-24,
+._80cm ._7oal path {
     transition: fill 0.5s !important;
 }
 
@@ -99,19 +255,26 @@ mask + rect, path#Fill-1, path#Fill-2, path#Fill-8, path#Fill-19, path#Fill-23, 
     transition: fill 0.0s !important;
 }
 
-._7301._hh7, ._7301._hh7._hh7._6ybn {
+._7301._hh7,
+._7301._hh7._hh7._6ybn {
     transition: background-color 0.5s, border-color 0.5s, color 0.5s !important;
 }
 
-._18p0, ._1jx4 {
+._18p0,
+._1jx4 {
     transition: border-top-color 0.5s !important;
 }
 
-._41ud ._o46:not(._nd_) ._hh7:not(._2f5r):not(._7301), ._29_7 ._3czg ._2e-7 ._2e-1, ._29_7 ._3czg ._2e-7 ._2e-2, input:not(._5eay):not(._1frb):not(._58al) {
+._41ud ._o46:not(._nd_) ._hh7:not(._2f5r):not(._7301),
+._29_7 ._3czg ._2e-7 ._2e-1,
+._29_7 ._3czg ._2e-7 ._2e-2,
+input:not(._5eay):not(._1frb):not(._58al) {
     transition: background-color 0.5s, color 0.5s !important;
 }
 
-._aou, ._4kf5, ._4kf6:not(._fy2) {
+._aou,
+._4kf5,
+._4kf6:not(._fy2) {
     transition: background 0.5s, color 0.5s !important;
 }
 
@@ -155,7 +318,12 @@ mask + rect, path#Fill-1, path#Fill-2, path#Fill-8, path#Fill-19, path#Fill-23, 
     transition: background-color 0.5s, border-top-color 0.5s !important;
 }
 
-._56jc, ._4coo, ._o46:not(._nd_) ._454y ._1mj1, ._1pka ._49no, ._1pka ._2abm, ._1pka ._5exl {
+._56jc,
+._4coo,
+._o46:not(._nd_) ._454y ._1mj1,
+._1pka ._49no,
+._1pka ._2abm,
+._1pka ._5exl {
     transition: border-bottom-color 0.5s !important;
 }
 
@@ -167,7 +335,19 @@ mask + rect, path#Fill-1, path#Fill-2, path#Fill-8, path#Fill-19, path#Fill-23, 
 
 /* --------------------------------------------------------------------------- */
 
-body, body ._4sp8, body ._4eby, body ._59s7, body ._3s-4, body ._2y8_, body ._53ij, body ._1sk6, body ._4gd0, body ._5pw9, body ._58ahm, body ._80cm, body ._3egs {
+body,
+body ._4sp8,
+body ._4eby,
+body ._59s7,
+body ._3s-4,
+body ._2y8_,
+body ._53ij,
+body ._1sk6,
+body ._4gd0,
+body ._5pw9,
+body ._58ahm,
+body ._80cm,
+body ._3egs {
     background: black !important;
 }
 
@@ -176,12 +356,16 @@ body, body ._4sp8, body ._4eby, body ._59s7, body ._3s-4, body ._2y8_, body ._53
     background-size: cover !important;
 }*/
 
-body ._2y8_, body ._53ij {
+body ._2y8_,
+body ._53ij {
     border: 1px solid rgba(255, 255, 255, .60) !important;
 }
 
 /* Borders */
-body ._673w, body ._36ic, body ._374b, body ._2y8y {
+body ._673w,
+body ._36ic,
+body ._374b,
+body ._2y8y {
     border-bottom: 1px solid rgba(255, 255, 255, .10) !important;
 }
 
@@ -197,24 +381,91 @@ body ._4_j5 {
     border-left: 1px solid rgba(255, 255, 255, .10) !important;
 }
 
-body ._4rv3, body ._1li-, body ._3war, body ._3wax {
+body ._4rv3,
+body ._1li-,
+body ._3war,
+body ._3wax {
     border-top: 1px solid rgba(255, 255, 255, .10) !important;
 }
 
 /* Text */
-body h1, body h2, body h3, body h4, body h5, body h6, body ._5pwa, body ._5pw6, body .__6k, body .__6l, body ._50f9 {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body ._5pwa,
+body ._5pw6,
+body .__6k,
+body .__6l,
+body ._50f9,
+body ._8slc,
+body ._3cn0,
+body ._3cnl,
+body ._3cnn a,
+._3cnj {
     color: #e2ded6 !important;
 }
 
-body textarea, body keygen, body select {
+body textarea,
+body keygen,
+body select {
     color: #bfc3c8 !important;
 }
 
-body ._2v6o, body ._5eu7, body ._3eus, body ._5uh, body ._3x6v, body ._5rh4, body ._5qsj, body ._497p, body ._5i_d .__6m, body ._1r3o, body ._374c, body ._3q35, body ._2y8z, body ._2mjl, body ._1n-e, body ._4dx5, body ._38wl, body ._4x7m, body ._4x79, body ._4x7b, body ._7ht_, body ._6zkf, body ._1mr_, body ._1mq-, body ._1jw-, body ._51l0 ._1-sv {
+body ._2v6o,
+body ._5eu7,
+body ._3eus,
+body ._5uh,
+body ._3x6v,
+body ._5rh4,
+body ._5qsj,
+body ._497p,
+body ._5i_d .__6m,
+body ._1r3o,
+body ._374c,
+body ._3q35,
+body ._2y8z,
+body ._2mjl,
+body ._1n-e,
+body ._4dx5,
+body ._38wl,
+body ._4x7m,
+body ._4x79,
+body ._4x7b,
+body ._7ht_,
+body ._6zkf,
+body ._1mr_,
+body ._1mq-,
+body ._1jw-,
+body ._51l0 ._1-sv {
     color: rgba(255, 255, 255, .40) !important;
 }
 
-body, body ._3szq, body ._4rph ._4rpj, body ._364g, body ._2jnv, body ._2jnx, body ._2jnz, body ._2jnx ._30e7 ._5j5f, body ._5i_d .__6k, body ._5i_d .__6l, body ._3wa-, body ._3wb0, body ._2c9i ._19jt, body ._4ng2, body ._3q34, body ._36zg, body ._hh7 a:not(._ih-), body ._3eur._6ybk a, body ._7q1q, body ._6ct8._6y58, body ._1jx6, body ._217a ._t5c ._5jdu, body ._217a ._t5c ._5jdu._42fr {
+body,
+body ._3szq,
+body ._4rph ._4rpj,
+body ._364g,
+body ._2jnv,
+body ._2jnx,
+body ._2jnz,
+body ._2jnx ._30e7 ._5j5f,
+body ._5i_d .__6k,
+body ._5i_d .__6l,
+body ._3wa-,
+body ._3wb0,
+body ._2c9i ._19jt,
+body ._4ng2,
+body ._3q34,
+body ._36zg,
+body ._hh7 a:not(._ih-),
+body ._3eur._6ybk a,
+body ._7q1q,
+body ._6ct8._6y58,
+body ._1jx6,
+body ._217a ._t5c ._5jdu,
+body ._217a ._t5c ._5jdu._42fr {
     color: white !important;
 }
 
@@ -229,31 +480,40 @@ body input:not(._5eay):not(._1frb):not(._58al) {
 
 /* ._1ht6 = name, ._1ht7 = time, ._1htf = message, ._1ht3 = unread */
 
-._1ht6, ._1ht7, ._1htf {
+._1ht6,
+._1ht7,
+._1htf {
     transition: color 0.5s, font-weight 0.5s !important;
 }
 
-._1ht1:active ._1ht6, ._1ht1:active ._1ht7, ._1ht1:active ._1htf {
+._1ht1:active ._1ht6,
+._1ht1:active ._1ht7,
+._1ht1:active ._1htf {
     transition: color 0.0s !important;
 }
 
-body ._1ht6, body ._1ht1:active ._1ht6 {
+body ._1ht6,
+body ._1ht1:active ._1ht6 {
     color: white !important;
 }
 
-body ._1ht7, body ._1ht1:active ._1ht7 {
+body ._1ht7,
+body ._1ht1:active ._1ht7 {
     color: rgba(255, 255, 255, .40) !important;
 }
 
-body ._1ht3 ._1ht7, body ._1ht3:active ._1ht7 {
+body ._1ht3 ._1ht7,
+body ._1ht3:active ._1ht7 {
     color: #0084ff !important;
 }
 
-body ._1htf, body ._1ht1:active ._1htf {
+body ._1htf,
+body ._1ht1:active ._1htf {
     color: rgba(102, 102, 102, 1) !important;
 }
 
-body ._1ht3 ._1htf, body ._1ht3:active ._1htf {
+body ._1ht3 ._1htf,
+body ._1ht3:active ._1htf {
     color: white !important;
 }
 
@@ -272,11 +532,14 @@ body ._5i_d {
     border: 1px solid rgba(255, 255, 255, .1) !important;
 }
 
-body ._618l, body ._3b4u {
+body ._618l,
+body ._3b4u {
     color: rgba(255, 255, 255, .75) !important;
 }
 
-body ._618n, body ._6cs7, body ._2f5n ._29ey {
+body ._618n,
+body ._6cs7,
+body ._2f5n ._29ey {
     color: rgba(255, 255, 255, .60) !important;
 }
 
@@ -285,7 +548,8 @@ body hr {
     color: #262626 !important;
 }
 
-body ._2c9i ._4ebz, body ._4dx4 {
+body ._2c9i ._4ebz,
+body ._4dx4 {
     border-bottom: 1px solid rgba(255, 255, 255, .10) !important;
 }
 
@@ -293,7 +557,12 @@ body ._koh {
     border-bottom: 1px solid #171717 !important;
 }
 
-body ._koh li:not(.selected), body ._7492, body ._74ku, body ._4k7a, body ._67tw, body ._4lh7 {
+body ._koh li:not(.selected),
+body ._7492,
+body ._74ku,
+body ._4k7a,
+body ._67tw,
+body ._4lh7 {
     color: rgba(255, 255, 255, .5) !important;
 }
 
@@ -328,7 +597,8 @@ body ._jf4 ._jf3 {
     color: rgba(255, 255, 255, .40) !important;
 }
 
-body ._1ht1._1ht2, body ._1ht1._1ht2 ._6zkc {
+body ._1ht1._1ht2,
+body ._1ht1._1ht2 ._6zkc {
     background-color: rgba(255, 255, 255, .07) !important;
 }
 
@@ -360,7 +630,8 @@ body ._7jxv {
     background: rgba(0, 0, 0, .4) !important;
 }
 
-body ._5iwm ._58al, body ._3rh0 {
+body ._5iwm ._58al,
+body ._3rh0 {
     background-color: #0a0908 !important;
 }
 
@@ -384,7 +655,8 @@ body ._4x7m {
     background: rgba(255, 255, 255, .05) !important;
 }
 
-body ._3wb1, body ._3way {
+body ._3wb1,
+body ._3way {
     border: 1px solid #191919 !important;
 }
 
@@ -397,7 +669,10 @@ body ._3nta:hover {
     background-color: #0a0908 !important;
 }
 
-body ._1liy ._1lj0:hover, body ._5l37:hover, body ._5l37:active, body ._1k1p {
+body ._1liy ._1lj0:hover,
+body ._5l37:hover,
+body ._5l37:active,
+body ._1k1p {
     background-color: rgba(255, 255, 255, .05) !important;
 }
 
@@ -415,15 +690,36 @@ body a._4ce_ {
     opacity: .7 !important;
 }
 
-body mask + rect {
+body mask+rect {
     fill: black !important;
 }
 
-body ._6ymu, body ._6-xp, body ._6ybv, body ._6y56, body ._6ybz:not(._7ipg), body ._7hu0, body ._7hty, body ._7-_v, body ._7hu1, body ._5zvq._7i2o:hover, body ._3-wv._7i2n:hover, body ._2rvp._7i2l:hover, body ._7kpk {
+body ._6ymu,
+body ._6-xp,
+body ._6ybv,
+body ._6y56,
+body ._6ybz:not(._7ipg),
+body ._7hu0,
+body ._7hty,
+body ._7-_v,
+body ._7hu1,
+body ._5zvq._7i2o:hover,
+body ._3-wv._7i2n:hover,
+body ._2rvp._7i2l:hover,
+body ._7kpk {
     background-color: rgba(255, 255, 255, .12) !important;
 }
 
-body path#Fill-1, body path#Fill-2, body path#Fill-8, body path#Fill-19, body path#Fill-23, body path#Fill-24, body ._7i2o:hover path, body ._7i2n:hover path#Fill-19, body ._7i2l:hover path#Fill-1, body ._80cm ._7oal path {
+body path#Fill-1,
+body path#Fill-2,
+body path#Fill-8,
+body path#Fill-19,
+body path#Fill-23,
+body path#Fill-24,
+body ._7i2o:hover path,
+body ._7i2n:hover path#Fill-19,
+body ._7i2l:hover path#Fill-1,
+body ._80cm ._7oal path {
     fill: white !important;
 }
 
@@ -431,7 +727,9 @@ body a[aria-label="Create a poll"] path#Fill-1 {
     fill: inherit !important;
 }
 
-body ._7i2o path, body ._7i2n path#Fill-19, body ._7i2l path#Fill-1 {
+body ._7i2o path,
+body ._7i2n path#Fill-19,
+body ._7i2l path#Fill-1 {
     fill: rgba(255, 255, 255, 0.34) !important;
 }
 
@@ -439,17 +737,25 @@ body ._1hbw ._5pd7 {
     background-color: rgba(255, 255, 255, 0.6) !important;
 }
 
-body ._7301._hh7, body ._7301._hh7._hh7._6ybn {
+body ._7301._hh7,
+body ._7301._hh7._hh7._6ybn {
     background-color: black !important;
     border-color: rgba(255, 255, 255, .1) !important;
     color: rgba(255, 255, 255, .4) !important;
 }
 
-body ._18p0, body ._1jx4 {
+body ._18p0,
+body ._1jx4 {
     border-top-color: rgba(255, 255, 255, .1) !important;
 }
 
-body ._7q0v, body ._7q1i, body ._7q1l, body ._7q1p._7q1l, body ._7q1m, body ._7q1n, body .__6j._43kk {
+body ._7q0v,
+body ._7q1i,
+body ._7q1l,
+body ._7q1p._7q1l,
+body ._7q1m,
+body ._7q1n,
+body .__6j._43kk {
     border-color: black !important;
 }
 
@@ -458,7 +764,8 @@ body ._41ud ._o46:not(._nd_) ._hh7:not(._2f5r):not(._7301) {
     color: white !important;
 }
 
-body ._aou, body ._4kf5 {
+body ._aou,
+body ._4kf5 {
     background: rgb(86, 87, 88) !important;
 }
 
@@ -486,7 +793,8 @@ body ._44ju {
     text-decoration-color: white !important;
 }
 
-body ._1ht1._6zk9._1ht2, body ._1ht1._6zk9:hover {
+body ._1ht1._6zk9._1ht2,
+body ._1ht1._6zk9:hover {
     background: transparent !important;
 }
 
@@ -495,11 +803,15 @@ body ._2f5n {
     border-color: rgba(255, 255, 255, .1) !important;
 }
 
-body .__6m, body ._50f8, body ._50cx:not(._50cy) {
+body .__6m,
+body ._50f8,
+body ._50cx:not(._50cy) {
     color: #6f6b63 !important;
 }
 
-body ._5irm._7mkm, body ._7mki, body ._49no {
+body ._5irm._7mkm,
+body ._7mki,
+body ._49no {
     background-color: black !important;
 }
 
@@ -512,7 +824,10 @@ body ._7t1o {
     background-color: #050505 !important;
 }
 
-body ._71bm._71bn, body ._71bo._71bm:hover, body ._3b4t, body ._2m5p {
+body ._71bm._71bn,
+body ._71bo._71bm:hover,
+body ._3b4t,
+body ._2m5p {
     border-color: rgba(255, 255, 255, .1) !important;
 }
 
@@ -520,7 +835,8 @@ body ._3b4h {
     background-color: #090909 !important;
 }
 
-body ._ric, body ._4mnq {
+body ._ric,
+body ._4mnq {
     background-color: #14120f !important;
     border-color: black !important;
 }
@@ -539,7 +855,9 @@ body ._8i1 {
     background: rgba(0, 0, 0, .95) !important;
 }
 
-body ._13iv ._5l37:active, body ._13iv ._1k1p, body ._13iv ._5l37:hover {
+body ._13iv ._5l37:active,
+body ._13iv ._1k1p,
+body ._13iv ._5l37:hover {
     background-color: #242424 !important;
 }
 
@@ -578,12 +896,15 @@ body ._o46:not(._nd_) ._454y ._1mj1 {
     border-bottom-color: rgba(153, 153, 153) !important;
 }
 
-body ._29_7 ._3czg ._2e-7 ._2e-1, body ._29_7 ._3czg ._2e-7 ._2e-2 {
+body ._29_7 ._3czg ._2e-7 ._2e-1,
+body ._29_7 ._3czg ._2e-7 ._2e-2 {
     background-color: rgba(72, 72, 72) !important;
     color: black !important;
 }
 
-body ._1pka ._49no, body ._1pka ._2abm, body ._1pka ._5exl {
+body ._1pka ._49no,
+body ._1pka ._2abm,
+body ._1pka ._5exl {
     border-bottom-color: #111111 !important;
 }
 
@@ -594,19 +915,4 @@ body ._2pgc {
 
 body ._5r8a._5r8b {
     background: #14120f !important;
-}
-
-/* From @mathieuf20 - Fix code blocks yellow */
-body ._3058 ._wu0 ._52mr {
-	color: white;
-}
-
-body ._wu0 {
-	background: #222222;
-	border: 1px solid #444444;
-}
-/* end */
-
-body ._8slc {
-    color: #e2ded6;
 }
