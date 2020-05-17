@@ -1,4 +1,4 @@
-# Dark mode for Franz services (Facebook Messenger, Slack etc.)
+# Dark mode for Franz and Ferdi services (Facebook Messenger, Slack etc.)
 
 ## Installation
 1. Copy the `darkmode.css` file to the corresponding `recipe` (service) folder. For example: below's `[service folder]` means `messenger` or `slack` etc.:
@@ -24,4 +24,4 @@
 * [onyx](https://github.com/vednoc/onyx) by [@vednoc](https://github.com/vednoc)
 
 ---
-_P/s: Gmail, Telegram and Skype is natively supported. You can change to dark mode in their settings._
+_P/s: Gmail and Skype is natively supported. You can change to dark mode in their settings._
