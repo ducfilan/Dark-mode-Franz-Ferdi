@@ -16,6 +16,7 @@
 4. Google Calendar
 5. Whatsapp
 6. LinkedIn
+7. Telegram
 
 ## References
 * [slack-night-mode](https://github.com/laCour/slack-night-mode) by [@laCour](https://github.com/laCour)
