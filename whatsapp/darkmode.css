@@ -1028,6 +1028,14 @@ html[dir='LTR'] .landing-header::after {
   }
 }
 
+.copyable-text{
+  color: #eee;
+}
+
+._3FRCZ{
+  color: #eee !important;
+}
+
 @keyframes pulse {
   40% {
     opacity: 0;
