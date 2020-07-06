@@ -1033,8 +1033,14 @@ html[dir='LTR'] .landing-header::after {
 }
 
 ._3FRCZ{
-  color: #282d37 !important;
+  color: #eee !important;
 }
+
+._3uMse{
+  background-color: #282d37 !important;
+  border-color: #282d37 !important;
+}
+
 
 @keyframes pulse {
   40% {
