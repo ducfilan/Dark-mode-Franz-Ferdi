@@ -1041,6 +1041,9 @@ html[dir='LTR'] .landing-header::after {
   border-color: #282d37 !important;
 }
 
+._3Whw5{
+  color: #eee !important;
+}
 
 @keyframes pulse {
   40% {
