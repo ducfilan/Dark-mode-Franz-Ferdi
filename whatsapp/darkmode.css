@@ -1053,6 +1053,18 @@ html[dir='LTR'] .landing-header::after {
   background-color: #282d37 !important;
 }
 
+._269b4 {
+  background-color: #323843 !important;
+}
+
+._3B5Ir {
+  background-color: #282d37 !important;
+}
+
+._1x3hh {
+  box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.25) !important;
+}
+
 @keyframes pulse {
   40% {
     opacity: 0;
