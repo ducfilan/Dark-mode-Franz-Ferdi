@@ -6,9 +6,13 @@ body,
 ._3z62,
 ._4u-c,
 .gp5lzjy8,
-._6q1a ._5irm._7mkm {
-    background-color: #262626;
-    color: #cecece;
+._6q1a ._5irm._7mkm,
+.po7knmyp,
+.gp5lzjy8,
+.i2eieyeb,
+.nred35xi {
+    background-color: #000 !important;
+    color: #cecece !important;
 }
 
 ._6q1a ._5irm._7mkm {
@@ -26,8 +30,9 @@ span,
 ._4p9w ._1ht6,
 ._497p,
 ._ih3,
-._4k7a {
-    color: #95a5a6;
+._4k7a,
+.oo9gr5id {
+    color: #95a5a6 !important;
 }
 
 ._5i_d,
@@ -56,5 +61,5 @@ span._509v {
 }
 
 ._6q1a ._8rsr {
-    fill: #262626;
+    fill: #000;
 }
