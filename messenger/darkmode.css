@@ -341,14 +341,13 @@ body ._4eby,
 body ._59s7,
 body ._3s-4,
 body ._2y8_,
-body ._53ij,
 body ._1sk6,
 body ._4gd0,
 body ._5pw9,
 body ._58ahm,
 body ._80cm,
 body ._3egs {
-    background: black !important;
+    background: #222222 !important;
 }
 
 /*body ._4sp8 {
@@ -356,8 +355,7 @@ body ._3egs {
     background-size: cover !important;
 }*/
 
-body ._2y8_,
-body ._53ij {
+body ._2y8_ {
     border: 1px solid rgba(255, 255, 255, .60) !important;
 }
 
@@ -529,7 +527,8 @@ body label {
 }
 
 body ._5i_d {
-    border: 1px solid rgba(255, 255, 255, .1) !important;
+    border: 1px solid #303030 !important;
+    background-color: #303030 !important;
 }
 
 body ._618l,
@@ -540,7 +539,8 @@ body ._3b4u {
 body ._618n,
 body ._6cs7,
 body ._2f5n ._29ey {
-    color: rgba(255, 255, 255, .60) !important;
+    color: #rgba(255, 255, 255, .60) !important;
+    background-color: #303030 !important;
 }
 
 body hr {
@@ -756,7 +756,7 @@ body ._7q1p._7q1l,
 body ._7q1m,
 body ._7q1n,
 body .__6j._43kk {
-    border-color: black !important;
+    border-color: #303030 !important;
 }
 
 body ._41ud ._o46:not(._nd_) ._hh7:not(._2f5r):not(._7301) {
@@ -799,8 +799,8 @@ body ._1ht1._6zk9:hover {
 }
 
 body ._2f5n {
-    background-color: black !important;
-    border-color: rgba(255, 255, 255, .1) !important;
+    background-color: #303030 !important;
+    border-color: #303030 !important;
 }
 
 body .__6m,
@@ -915,4 +915,31 @@ body ._2pgc {
 
 body ._5r8a._5r8b {
     background: #14120f !important;
+}
+
+body ._wsc {
+    background-color: black !important;
+}
+
+body ._53ij {
+    background-color: #202020 !important;
+    border: 1px solid #202020 !important;
+}
+
+/* hide react focus outline */
+body ._1z8r:focus {
+    outline: 0 none !important;
+}
+
+body ._8sop:focus {
+    outline: 0 none !important;
+}
+
+/* scrollbar styling */
+.uiScrollableAreaTrack {
+    background-color: transparent !important;
+}
+
+.uiScrollableAreaGripper {
+    background-color: #6d6d6d !important;
 }
