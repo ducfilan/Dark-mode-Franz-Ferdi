@@ -961,7 +961,7 @@ code in here
 ```
 */
 ._wu0 {
-    color: white;
-    background-color: #222222;
-    border: 1px solid #333333;
+    color: white !important;
+    background-color: #222222 !important;
+    border: 1px solid #333333 !important;
 }
