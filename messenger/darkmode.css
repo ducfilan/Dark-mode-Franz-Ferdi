@@ -342,11 +342,9 @@ body ._59s7,
 body ._3s-4,
 body ._2y8_,
 body ._1sk6,
-body ._4gd0,
 body ._5pw9,
 body ._58ahm,
-body ._80cm,
-body ._3egs {
+body ._80cm {
     background: #222222 !important;
 }
 
@@ -942,4 +940,27 @@ body ._8sop:focus {
 
 .uiScrollableAreaGripper {
     background-color: #6d6d6d !important;
+}
+
+/* Replied to message */
+body ._3egs {
+    background-color: black !important;
+}
+
+/* Typing indicator */
+body ._4gd0 {
+    background-color: black !important;
+}
+
+/* Code blocks
+
+These can be created in Facebook as in Github by typing:
+```
+code in here
+```
+*/
+._wu0 {
+    color: white !important;
+    background-color: #222222 !important;
+    border: 1px solid #333333 !important;
 }
