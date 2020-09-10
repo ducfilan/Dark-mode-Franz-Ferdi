@@ -952,3 +952,16 @@ body ._3egs {
 body ._4gd0 {
     background-color: black !important;
 }
+
+/* Code blocks
+
+These can be created in Facebook as in Github by typing:
+```
+code in here
+```
+*/
+._wu0 {
+    color: white;
+    background-color: #222222;
+    border: 1px solid #333333;
+}
