@@ -345,8 +345,7 @@ body ._1sk6,
 body ._4gd0,
 body ._5pw9,
 body ._58ahm,
-body ._80cm,
-body ._3egs {
+body ._80cm {
     background: #222222 !important;
 }
 
@@ -942,4 +941,9 @@ body ._8sop:focus {
 
 .uiScrollableAreaGripper {
     background-color: #6d6d6d !important;
+}
+
+/* Replied to message */
+body ._3egs {
+    background-color: black !important;
 }
