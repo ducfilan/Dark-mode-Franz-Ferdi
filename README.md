@@ -22,6 +22,7 @@
 * [slack-night-mode](https://github.com/laCour/slack-night-mode) by [@laCour](https://github.com/laCour)
 * [LinkedDark](https://userstyles.org/styles/173399/linkeddark) by [@Jordy3D](https://github.com/Jordy3D)
 * [onyx](https://github.com/vednoc/onyx) by [@vednoc](https://github.com/vednoc)
+* [@cicerakes](https://github.com/cicerakes)
 
 ---
 _P/s: Gmail and Skype is natively supported. You can change to dark mode in their settings._
