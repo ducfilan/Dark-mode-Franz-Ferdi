@@ -17,6 +17,7 @@
 5. Whatsapp
 6. LinkedIn
 7. Telegram
+8. Instagram
 
 ## References
 * [slack-night-mode](https://github.com/laCour/slack-night-mode) by [@laCour](https://github.com/laCour)
