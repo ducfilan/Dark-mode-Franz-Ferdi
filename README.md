@@ -26,7 +26,7 @@
 * [@cicerakes](https://github.com/cicerakes)
 
 ---
-_P/s: Gmail and Skype is natively supported. You can change to dark mode in their settings._
+_P/s: Gmail and Skype are natively supported. You can change to dark mode in their settings._
 
 ---
 
