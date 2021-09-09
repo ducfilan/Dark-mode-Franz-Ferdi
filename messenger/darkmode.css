@@ -1,6 +1,7 @@
 :root, .__fb-light-mode {
     --card-background: #1e1e1e;
     --comment-background: #292929;
+    --comment-footer-background: #333;
     --card-background-flat: #292929;
     --disabled-button-background: #373737;
     --divider: #4d4d4d;
