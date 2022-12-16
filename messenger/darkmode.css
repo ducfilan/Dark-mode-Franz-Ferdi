@@ -84,3 +84,14 @@ path[d="M18 30c-6.627 0-12-5.372-12-12 0-6.627 5.373-12 12-12 6.628 0 12 5.373 1
 .sp_BQbKIpOzOAx_1_5x, .sp_a51jIvPl6dA_1_5x {
     filter: invert(.8);
 }
+
+/* Upload file icon color */
+[aria-label="Upload another photo/video"] > [data-visualcompletion="css-img"], 
+[aria-label="Upload another photo/video"] + div [data-visualcompletion="css-img"] {
+    filter: invert(1);
+}
+
+/* Upload field background-color */
+[aria-label="Upload another photo/video"] + div > div:first-child {
+    background-color: var(--disabled-button-background);
+}
