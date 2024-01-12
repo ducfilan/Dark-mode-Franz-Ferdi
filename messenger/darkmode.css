@@ -1,5 +1,6 @@
 :root, .__fb-light-mode {
     --card-background: #1e1e1e;
+    --mwp-message-row-background: #1e1e1e;
     --chat-incoming-message-bubble-background-color: #292929;
     --comment-background: #292929;
     --comment-footer-background: #333;
