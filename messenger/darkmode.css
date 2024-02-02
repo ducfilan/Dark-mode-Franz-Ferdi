@@ -456,6 +456,7 @@
   /* There are some differences in Web FB variables, probably overgoing theme changes */
   --icon-secondary-color: var(--secondary-icon);
   --pressable-background-color-hover: var(--hover-overlay);
+  --pressable-background-color-selected: var(--highlight-bg);
 }
 
 html::-webkit-scrollbar {
