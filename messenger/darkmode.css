@@ -109,7 +109,7 @@
   --text-badge-critical-background: #e41e3f;
   --blue-link: #5AA7FF;
   --border-focused: #8A8D91;
-  --card-background: #1e1e1e;
+  --card-background: #242526;
   --dataviz-primary-1: rgb(48,200,180);
   --disabled-button-background: rgba(255, 255, 255, 0.2);
   --disabled-button-text: rgba(255, 255, 255, 0.3);
@@ -452,6 +452,10 @@
   --surface-background: var(--mwp-message-row-background);
   --wash: #373737;
   --web-wash: var(--mwp-message-row-background);
+
+  /* There are some differences in Web FB variables, probably overgoing theme changes */
+  --icon-secondary-color: var(--secondary-icon);
+  --pressable-background-color-hover: var(--hover-overlay);
 }
 
 html::-webkit-scrollbar {
