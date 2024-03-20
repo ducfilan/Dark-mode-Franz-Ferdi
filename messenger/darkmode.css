@@ -140,7 +140,7 @@
   --media-inner-border: rgba(255, 255, 255, 0.05);
   --media-outer-border: #33363A;
   --media-pressed: rgba(68, 73, 80, 0.35);
-  --mwp-message-row-background: #1e1e1e;
+  --messenger-card-background: #1e1e1e;
   --messenger-reply-background: #18191A;
   --overlay-on-media: rgba(0, 0, 0, 0.6);
   --nav-bar-background: #242526;
@@ -430,12 +430,12 @@
 
   --icon-primary-color: #fff;
   --comment-background: #303030;
-  --chat-incoming-message-bubble-background-color: var(--comment-background);
+  --chat-incoming-message-bubble-background-color: var(--comment-background) !important;
   --comment-footer-background: #333;
   --card-background-flat: var(--comment-background);
   --disabled-button-background: #373737;
   --divider: #4d4d4d;
-  --messenger-card-background: var(--mwp-message-row-background);
+  --mwp-message-row-background: var(--messenger-card-background);
   --overlay-alpha-80: rgba(41, 41, 41, 0.8);
   --popover-background: var(--mwp-message-row-background);
   --primary-icon: #cecece;
@@ -453,8 +453,9 @@
   --wash: #373737;
   --web-wash: var(--mwp-message-row-background);
 
-  /* There are some differences in Web FB variables, probably overgoing theme changes */
+  /* There are some differences in Web FB variables, probably undergoing theme changes */
   --icon-secondary-color: var(--secondary-icon);
+  --icon-tertiary-color: var(--secondary-icon);
   --pressable-background-color-hover: var(--hover-overlay);
   --pressable-background-color-selected: var(--highlight-bg);
 }
